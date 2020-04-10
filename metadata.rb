@@ -1,8 +1,8 @@
 name 'homelab-setup'
-maintainer 'The Authors'
-maintainer_email 'you@example.com'
+maintainer 'Jim Quilty'
+maintainer_email 'jquilty@chef.io'
 license 'All Rights Reserved'
-description 'Installs/Configures homelab-setup'
+description 'General setup for homelab linux instances'
 version '0.1.0'
 chef_version '>= 14.0'
 
