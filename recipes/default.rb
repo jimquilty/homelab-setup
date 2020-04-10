@@ -8,6 +8,10 @@ package 'vim' do
   action :install
 end
 
+package 'wget' do
+  action :install
+end
+
 user_home = "/home/#{node[:homelab_setup][:user]}"
 
 user node[:homelab_setup][:user] do
