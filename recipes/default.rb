@@ -4,13 +4,20 @@
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
 
-package 'vim' do
-  action :install
+apt_update 'all platforms' do
+  frequency 86400
+  action :periodic
+  notifies :run, 'execute[upgrade ubuntu]', :immediately
 end
 
-package 'wget' do
-  action :install
+execute 'upgrade ubuntu' do
+  command 'apt upgrade -y'
+  action :nothing
 end
+
+package 'vim'
+
+package 'wget'
 
 user_home = "/home/#{node[:homelab_setup][:user]}"
 
