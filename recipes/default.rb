@@ -4,7 +4,7 @@
 #
 # Copyright:: 2020, The Authors, All Rights Reserved.
 
-apt_update 'all platforms' do
+apt_update 'apt update' do
   frequency 86400
   action :periodic
   notifies :run, 'execute[upgrade ubuntu]', :immediately
